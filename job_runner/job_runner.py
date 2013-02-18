@@ -12,6 +12,8 @@ import job_runner_directory
 import job_runner_util
 import job_runner_configuration
 
+logger = logging.getLogger("job runner")
+
 class JobRunner:
     """ JobRunner class """
     def __init__(self, handler, directory, options):
