@@ -36,7 +36,7 @@ class JobRunnerDirectory:
         # Ensure that all directories lie on same file system. This is needed for move atomicity
         # Without openat calls, there is still a race condition that somebody is so smart to
         # over-mount the directories, but I don't care
-        if len(set([os.stat(d).st_dev) for d in self.directory_map.values()])) > 1:
+        if len(set([os.stat(d).st_dev for d in self.directory_map.values()])) > 1:
             raise Exception("Illegal directory setting: Directories are not on same file system")
 
     def __call__(self, key = None):
