@@ -7,6 +7,7 @@ import json
 from time import time
 import sys
 import optparse
+import signal
 import job_runner_directory
 import job_runner_util
 import job_runner_configuration
